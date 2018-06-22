@@ -1,0 +1,18 @@
+# It is possible that some browsers don't allow to run scripts combined with locally stored data. 
+# This is a workaround for Chrome
+
+For OSX, open Terminal and run:
+
+$ open -a Google\ Chrome --args --disable-web-security --user-data-dir
+--user-data-dir required on Chrome 49+ on OSX
+
+For Linux run:
+
+$ google-chrome --disable-web-security
+Also if you're trying to access local files for dev purposes like AJAX or JSON, you can use this flag too.
+
+-–allow-file-access-from-files
+For Windows go into the command prompt and go into the folder where Chrome.exe is and type
+
+chrome.exe --disable-web-security
+That should disable the same origin policy and allow you to access local files.
